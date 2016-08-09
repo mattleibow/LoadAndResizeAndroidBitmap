@@ -39,9 +39,7 @@ namespace LoadAndResizeAndroidBitmap
                 var oldImage = imageView.Drawable as BitmapDrawable;
                 if (oldImage != null && oldImage.Bitmap != null)
                 {
-                    System.Console.WriteLine("Cleaning");
-
-                    // CLean up the old bitmap
+                    // Clean up the old bitmap
                     imageView.SetImageBitmap(null);
                     var oldBitmap = oldImage.Bitmap;
                     oldBitmap.Recycle();
