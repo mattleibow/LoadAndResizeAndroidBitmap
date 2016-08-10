@@ -63,3 +63,9 @@ if (oldImage != null && oldImage.Bitmap != null)
 // set new image
 imageView.SetImageBitmap(LoadBitmap());
 ```
+
+More information can be found in the docs:
+ - https://developer.xamarin.com/guides/android/advanced_topics/garbage_collection/#Helping_the_GC
+
+Bugzilla:
+ - https://bugzilla.xamarin.com/show_bug.cgi?id=3024
