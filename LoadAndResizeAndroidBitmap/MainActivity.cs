@@ -45,6 +45,12 @@ namespace LoadAndResizeAndroidBitmap
                     oldBitmap.Recycle();
                     oldBitmap.Dispose();
                     oldBitmap = null;
+
+                    // because we are reference the bitmap from the image view
+                    // we need to just hint to the GC that it needs to do
+                    // a nice GC collection. It should only take ~1ms.
+                    // Bugzilla: https://bugzilla.xamarin.com/show_bug.cgi?id=3024
+                    System.GC.Collect();
                 }
 
                 var smallImage = LoadAndResizeBitmap(filePath, 200, 200);
