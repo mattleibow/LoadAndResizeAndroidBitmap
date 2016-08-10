@@ -1,4 +1,4 @@
-Loading & Resizing a Bitmap in Xamarin.Android
+# Loading & Resizing a Bitmap in Xamarin.Android
 
 When working with `Bitmap`s in Xamarin.Android, we need to remember that we are dealing with 2 
 garbage collectors: one in the Java world and one in the .NET world. Although this may seem like 
