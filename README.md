@@ -41,6 +41,9 @@ anotherObject.Bitmap = null;
 myBitmap.Recycle();
 myBitmap.Dispose();
 myBitmap = null;
+
+// let the GC know it can run
+System.GC.Collect();
 ```
 
 This can be seen when updating the picture inside an `ImageView`:
